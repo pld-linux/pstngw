@@ -1,14 +1,14 @@
 Summary:	H.323 to PSTN gateway
 Summary(pl):	Bramka H.323 -> PSTN
 Name:		pstngw
-Version:	1.1.5
+Version:	1.1.7
 Release:	1
 License:	MPL
 Group:		Networking/Daemons
 Source0:	http://www.openh323.org/bin/%{name}_%{version}.tar.gz
 Patch0:		%{name}-mak_files.patch
 URL:		http://www.openh323.org/
-BuildRequires:	openh323-devel >= 1.10.0
+BuildRequires:	openh323-devel >= 1.10.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %requires_eq	openh323
 
