@@ -1,16 +1,17 @@
 Summary:	H.323 to PSTN gateway
 Summary(pl):	Bramka H.323 -> PSTN
 Name:		pstngw
-Version:	1.1.7
+Version:	1.2.2
 Release:	1
-License:	MPL
+License:	MPL 1.0
 Group:		Networking/Daemons
 Source0:	http://www.openh323.org/bin/%{name}_%{version}.tar.gz
 Patch0:		%{name}-mak_files.patch
 URL:		http://www.openh323.org/
-BuildRequires:	openh323-devel >= 1.10.4
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRequires:	openh323-devel >= 1.11.7
+BuildRequires:	pwlib-devel >= 1.4.11
 %requires_eq	openh323
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This is a very simple PSTN to H.323 gateway program using the OpenH323
@@ -30,7 +31,8 @@ po³±czeñ przychodz±cych do odpowiedniego klienta.
 PWLIBDIR=%{_prefix}; export PWLIBDIR
 OPENH323DIR=%{_prefix}; export OPENH323DIR
 
-%{__make} optshared OPTCCFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
+%{__make} %{?debug:debug}%{!?debug:opt}shared \
+	OPTCCFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 
 %install
 rm -rf $RPM_BUILD_ROOT
