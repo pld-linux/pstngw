@@ -37,12 +37,10 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 
 install obj_*/%{name} $RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf *.txt
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz *.htm
+%doc *.txt *.htm
 %attr(755,root,root) %{_bindir}/*
