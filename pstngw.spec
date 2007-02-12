@@ -1,5 +1,5 @@
 Summary:	H.323 to PSTN gateway
-Summary(pl):	Bramka H.323 -> PSTN
+Summary(pl.UTF-8):   Bramka H.323 -> PSTN
 Name:		pstngw
 Version:	1.2.2
 Release:	2
@@ -19,10 +19,10 @@ This is a very simple PSTN to H.323 gateway program using the OpenH323
 library. It allows H.323 clients to make outgoing calls, and incoming
 calls to be routed to a specific H.323 client.
 
-%description -l pl
-To jest bardzo prosta bramka H.323 -> PSTN u¿ywaj±ca biblioteki OpenH323.
-Pozwala klientom H.323 na nawi±zywania po³±czeñ, oraz na przekierowywanie
-po³±czeñ przychodz±cych do odpowiedniego klienta.
+%description -l pl.UTF-8
+To jest bardzo prosta bramka H.323 -> PSTN uÅ¼ywajÄ…ca biblioteki OpenH323.
+Pozwala klientom H.323 na nawiÄ…zywania poÅ‚Ä…czeÅ„, oraz na przekierowywanie
+poÅ‚Ä…czeÅ„ przychodzÄ…cych do odpowiedniego klienta.
 
 %prep
 %setup -qn %{name}
