@@ -1,5 +1,5 @@
 Summary:	H.323 to PSTN gateway
-Summary(pl.UTF-8):   Bramka H.323 -> PSTN
+Summary(pl.UTF-8):	Bramka H.323 -> PSTN
 Name:		pstngw
 Version:	1.2.2
 Release:	2
