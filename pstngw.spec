@@ -26,7 +26,7 @@ połączeń przychodzących do odpowiedniego klienta.
 
 %prep
 %setup -qn %{name}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__make} %{?debug:debug}%{!?debug:opt}shared \
